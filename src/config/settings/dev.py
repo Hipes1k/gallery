@@ -6,7 +6,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+INSTALLED_APPS += ["django_extensions"]  # NOQA: F405
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 

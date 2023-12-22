@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from cars.models import AdditionalCharacteristics, Brand, Car, Category
+
+admin.site.register([Car, AdditionalCharacteristics, Brand, Category])
