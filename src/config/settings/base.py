@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "phonenumber_field",
     "accounts",
-    "favorite_cars",
     "blog",
     "core",
     "cars",
