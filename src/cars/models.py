@@ -45,7 +45,7 @@ class Car(models.Model):
     category = models.ForeignKey(
         to="cars.Category", related_name="category", on_delete=models.CASCADE
     )
-    description = models.CharField(max_length=255)
+    description = models.TextField(max_length=255)
     image = models.ImageField(upload_to="media/cars/cars_images")
 
     class Meta:
@@ -61,7 +61,7 @@ class Car(models.Model):
 
 class FavoriteCars(models.Model):
     user = models.ForeignKey(to=get_user_model(), on_delete=models.CASCADE)
-    car = models.ManyToManyField(to="cars.Car")
+    car = models.ForeignKey(to="cars.Car", on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Favorite Car"
